@@ -22,14 +22,70 @@
                                 <color key="textColor" systemColor="systemBlueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Before Tax Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGR-Ex-Io1">
+                                <rect key="frame" x="12" y="117" width="123.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$150" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lHS-GY-6je">
+                                <rect key="frame" x="143.5" y="110.5" width="258.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sales Tax Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieY-gq-Rzb">
+                                <rect key="frame" x="12" y="162" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uEv-8O-qeJ">
+                                <rect key="frame" x="131" y="155.5" width="271" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="After Tax Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJ7-PX-B9C">
+                                <rect key="frame" x="12" y="207" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gNU-3o-E8d">
+                                <rect key="frame" x="131" y="200.5" width="271" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHa-7o-vDv">
+                                <rect key="frame" x="317" y="258.5" width="85" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Calculate"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="uEv-8O-qeJ" firstAttribute="leading" secondItem="ieY-gq-Rzb" secondAttribute="trailing" constant="8" id="2Ds-7o-roO"/>
+                            <constraint firstItem="lHS-GY-6je" firstAttribute="centerY" secondItem="YGR-Ex-Io1" secondAttribute="centerY" id="2by-fi-hus"/>
+                            <constraint firstItem="bJ7-PX-B9C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="5bF-ie-BGl"/>
                             <constraint firstItem="Dz1-o5-knz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6a2-iC-TJZ"/>
+                            <constraint firstItem="gNU-3o-E8d" firstAttribute="leading" secondItem="bJ7-PX-B9C" secondAttribute="trailing" constant="12" id="81B-9Z-7Cy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dz1-o5-knz" secondAttribute="trailing" constant="12" id="N8e-kA-aim"/>
                             <constraint firstItem="Dz1-o5-knz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="Qp8-2x-hp0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gNU-3o-E8d" secondAttribute="trailing" constant="12" id="Spx-dZ-VIs"/>
+                            <constraint firstItem="YGR-Ex-Io1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="TeJ-x5-nXb"/>
+                            <constraint firstItem="ieY-gq-Rzb" firstAttribute="top" secondItem="YGR-Ex-Io1" secondAttribute="bottom" constant="24" id="Tp8-Zx-Oou"/>
+                            <constraint firstItem="bJ7-PX-B9C" firstAttribute="top" secondItem="ieY-gq-Rzb" secondAttribute="bottom" constant="24" id="ZAy-yW-uZo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lHS-GY-6je" secondAttribute="trailing" constant="12" id="Zo7-Rs-G8d"/>
+                            <constraint firstItem="YGR-Ex-Io1" firstAttribute="top" secondItem="Dz1-o5-knz" secondAttribute="bottom" constant="24" id="aYN-sk-BCg"/>
+                            <constraint firstItem="lHS-GY-6je" firstAttribute="leading" secondItem="YGR-Ex-Io1" secondAttribute="trailing" constant="8" id="atH-qL-rO7"/>
+                            <constraint firstItem="lHa-7o-vDv" firstAttribute="top" secondItem="gNU-3o-E8d" secondAttribute="bottom" constant="24" id="bR8-Sm-FKb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gNU-3o-E8d" secondAttribute="trailing" constant="12" id="cfb-oc-MKW"/>
+                            <constraint firstItem="gNU-3o-E8d" firstAttribute="centerY" secondItem="bJ7-PX-B9C" secondAttribute="centerY" id="g8V-Mr-fYV"/>
                             <constraint firstItem="Dz1-o5-knz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="mik-vL-vur"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lHa-7o-vDv" secondAttribute="trailing" constant="12" id="o5P-ua-9QK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uEv-8O-qeJ" secondAttribute="trailing" constant="12" id="oDo-vX-Btq"/>
+                            <constraint firstItem="ieY-gq-Rzb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="ylg-uf-zaP"/>
+                            <constraint firstItem="uEv-8O-qeJ" firstAttribute="centerY" secondItem="ieY-gq-Rzb" secondAttribute="centerY" id="zHL-Hs-vd8"/>
                         </constraints>
                     </view>
                 </viewController>
