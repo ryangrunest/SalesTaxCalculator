@@ -8,23 +8,36 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var afterTaxRateComponent: UITextField!
-    var beforeTaxPrice: Float = 0
+    var beforeTaxPrice: Float = 0;
+    var salesTaxRate: Float = 3;
+    @IBOutlet weak var calculatedTaxPrice: UITextField!
     
-    func updateView(input: String) {
-        if let value = Float(input) {
-            beforeTaxPrice = value
-            afterTaxRateComponent.text = String(describing: value)
+    override func viewDidLoad() {
+        super.viewDidLoad();
+    }
+    
+    func updateValuesFromComponent(component: UITextField) -> Float {
+        if let value = Float(component.text!) {
+            return value
+        } else {
+            return 0
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        updateView(input: "412")
+    func calculateTax() -> Void {
+        let taxPercentage = 1 + (salesTaxRate / 100);
+        let taxIncludedPrice = beforeTaxPrice * taxPercentage;
+        
+        calculatedTaxPrice.text = String(describing: taxIncludedPrice);
     }
 
     @IBAction func beforeTaxPriceChange(_ sender: UITextField) {
-        updateView(input: sender.text ?? "")
+        beforeTaxPrice = updateValuesFromComponent(component: sender)
+        calculateTax()
+    }
+    @IBAction func salesTaxRateChanged(_ sender: UITextField) {
+        salesTaxRate = updateValuesFromComponent(component: sender)
+        calculateTax()
     }
 }
 
