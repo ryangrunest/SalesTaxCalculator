@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var beforeTaxPrice: Float = 0;
-    var salesTaxRate: Float = 3;
+    var salesTaxRate: Float = 4.7;
     @IBOutlet weak var calculatedTaxPrice: UITextField!
     
     override func viewDidLoad() {
@@ -39,5 +39,9 @@ class ViewController: UIViewController {
         salesTaxRate = updateValuesFromComponent(component: sender)
         calculateTax()
     }
+    @IBAction func taxCalculaterButtonPressed(_ sender: Any) {
+        calculateTax()
+    }
+    
 }
 
